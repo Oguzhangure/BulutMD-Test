@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //CHAKRA IMPORTS
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Image, Heading } from "@chakra-ui/react";
 //COMPONENTS
 
 function HomeButton({ to, src, text, ...probs }) {
@@ -22,9 +22,9 @@ function HomeButton({ to, src, text, ...probs }) {
           maxW="250px"
           borderRadius="15px"
         ></Image>
-        <Text as="i" textAlign="center" fontSize="4xl" fontWeight="6px">
+        <Heading textAlign="center" size="lg">
           {text}
-        </Text>
+        </Heading>
       </Flex>
     </Link>
   );
