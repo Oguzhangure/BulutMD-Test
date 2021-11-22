@@ -3,33 +3,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 //CHAKRA IMPORTS
 import { Flex, IconButton, Select } from "@chakra-ui/react";
-import {
-  PhoneIcon,
-  AddIcon,
-  ArrowLeftIcon,
-  ArrowForwardIcon,
-} from "@chakra-ui/icons";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
 //COMPONENTS
 import NavbarButton from "./NavbarButton";
 
 function Navbar() {
   return (
-    <Flex
-      bg="#E9D8FD"
-      padding="10px"
-      alignItems="center"
-      justifyContent="space-around"
-    >
-      <Link to="/">
-        <IconButton
-          height="35px"
-          colorScheme="purple"
-          size="lg"
-          variant="outline"
-          icon={<ArrowLeftIcon />}
-        />
-      </Link>
-      <NavbarButton link="/movies" text="Filimler" />
+    <Flex padding="10px" alignItems="center" justifyContent="space-around">
+      <NavbarButton w="15px" link="/" text={<ChevronLeftIcon w={7} h={7} />} />
+      <NavbarButton link="/movies" text="Filmler" />
       <NavbarButton link="/series" text="Diziler" />
     </Flex>
   );

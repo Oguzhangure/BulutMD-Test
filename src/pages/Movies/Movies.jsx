@@ -6,7 +6,7 @@ import { Box } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 function Movies() {
   return (
-    <Box>
+    <Box bg="#6d6875" height="100vh">
       <Navbar />
       Filimler
     </Box>
