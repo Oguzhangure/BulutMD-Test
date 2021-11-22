@@ -61,7 +61,10 @@ function SearchBar() {
           _focus="none"
           as={Button}
           rightIcon={<ChevronDownIcon />}
-          boxShadow="dark-lg"
+          _hover={{
+            boxShadow: "0 20px 30px -11px rgb(31 35 65 / 80%)",
+            transform: "translate(0px, -5px)",
+          }}
         >
           Sırala
         </MenuButton>

@@ -9,16 +9,16 @@ function NavbarButton({ link, text, ...probs }) {
   return (
     <Link to={link}>
       <Button
-       minWidth="250px"
+        minWidth="250px"
         fontSize="2xl"
+        boxShadow="md"
         _hover={{
-          backgroundColor: "#ffcdb2",
-          transform: "translate3d(4px,0,-0)",
+          boxShadow: "0 20px 30px -11px rgb(31 35 65 / 80%)",
+          transform: "translate(0px, -5px)",
         }}
         w="150px"
         backgroundColor="#ffb4a2"
         borderRadius="20"
-        boxShadow="dark-lg"
         _focus="none"
         padding="13px"
         colorScheme="#6d6875"

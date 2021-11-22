@@ -9,7 +9,7 @@ import NavbarButton from "./NavbarButton";
 
 function Navbar() {
   return (
-    <Flex padding="10px" alignItems="center" justifyContent="space-around">
+    <Flex padding="10px" alignItems="center" justifyContent="space-around" paddingTop="15px">
       <NavbarButton w="15px" link="/" text={<ChevronLeftIcon w={7} h={7} />} />
       <NavbarButton link="/movies" text="Filmler" />
       <NavbarButton link="/series" text="Diziler" />
