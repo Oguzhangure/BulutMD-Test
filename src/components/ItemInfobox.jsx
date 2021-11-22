@@ -27,10 +27,10 @@ function ItemInfobox({ description, year, src, title, ...probs }) {
         maxW="200px"
         borderRadius="15px"
       ></Image>
-      <Heading textAlign="center" size="lg">
+      <Heading paddingY="5px" textAlign="center" size="lg">
         {title}
       </Heading>
-      <Heading textAlign="center" size="md">
+      <Heading paddingY="5px" textAlign="center" size="md">
         {year}
       </Heading>
       <Collapse startingHeight={45} in={show}>
