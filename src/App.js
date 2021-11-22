@@ -4,6 +4,7 @@ import { BrowserRouter as Switch, Route, Router } from "react-router-dom";
 //CHAKRA IMPORTS
 import { Box } from "@chakra-ui/react";
 //COMPONENTS
+import Navbar from "./components/Navbar";
 import Movies from "./pages/Movies/Movies";
 import Home from "./pages/Home/Home";
 import Series from "./pages/Series/Series";
