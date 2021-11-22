@@ -1,16 +1,11 @@
 //REACT IMPORTS
 import React from "react";
 //CHAKRA IMPORTS
-import { Box } from "@chakra-ui/react";
 //COMPONENTS
-import Navbar from "../../components/Navbar";
+
+import Movies from "../Movies/Movies";
 function Series() {
-  return (
-    <Box>
-      <Navbar />
-      Diziler
-    </Box>
-  );
+  return <Movies type="series" />;
 }
 
 export default Series;
