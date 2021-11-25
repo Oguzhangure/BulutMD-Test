@@ -14,7 +14,7 @@ function ItemInfobox({ description, year, src, title, ...probs }) {
       border="2px"
       w="215px"
       borderRadius="15px"
-      padding="8px"
+      padding="5px"
       flexDirection="column"
       background="#b5838d"
       boxShadow="lg"
@@ -23,7 +23,7 @@ function ItemInfobox({ description, year, src, title, ...probs }) {
         alignSelf="center"
         border="1px"
         boxShadow="md"
-        src={src}
+        src={`${src}`}
         maxW="200px"
         borderRadius="15px"
       ></Image>

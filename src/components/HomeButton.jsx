@@ -14,6 +14,7 @@ function HomeButton({ to, src, text, ...probs }) {
         flexDirection="column"
         background="#b5838d"
         boxShadow=" 0px 64px 82px 20px rgba(0,0,0,0.64)"
+        {...probs}
       >
         <Image
           border="1px"

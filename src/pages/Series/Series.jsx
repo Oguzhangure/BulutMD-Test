@@ -1,8 +1,7 @@
 //REACT IMPORTS
 import React from "react";
-//CHAKRA IMPORTS
-//COMPONENTS
 
+//COMPONENTS
 import Movies from "../Movies/Movies";
 function Series() {
   return <Movies type="series" />;

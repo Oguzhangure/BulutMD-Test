@@ -1,36 +1,42 @@
 //REACT IMPORTS
 import React from "react";
+import { useState, useEffect } from "react";
 //CHAKRA IMPORTS
 import {
   Flex,
   Input,
   IconButton,
-  Box,
   Button,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider,
 } from "@chakra-ui/react";
 import { SearchIcon, ChevronDownIcon } from "@chakra-ui/icons";
 //COMPONENTS
 
 function SearchBar() {
+  const [input, setInput] = useState();
+
+  const onSearch = () => {
+    setInput(document.getElementById("itemSearch").value);
+  };
+  console.log(input);
   return (
     <Flex
+      flexDirection={{ lg: "row", sm: "column" }}
       paddingY="2rem"
       paddingX="3rem"
       justifyContent="space-between"
       alignItems="center"
     >
-      <Flex w="550px">
+      <Flex
+        w={{ md: "550px", sm: "300px" }}
+        marginBottom={{ lg: "none", sm: "20px" }}
+      >
         <Input
+          minLength="3"
+          id="itemSearch"
           textColor="black"
           backgroundColor="#ffcdb2"
           borderRadius="15px 0px 0px 15px"
@@ -40,6 +46,7 @@ function SearchBar() {
           boxShadow="dark-lg"
         />
         <IconButton
+          onClick={() => onSearch()}
           backgroundColor="#ffb4a2"
           borderRadius="0px 15px 15px 0px"
           _focus="none"
@@ -74,9 +81,9 @@ function SearchBar() {
           backgroundColor="#ffcdb2"
           borderColor="black"
         >
+          <MenuItem>Tümünü Sırala</MenuItem>
           <MenuItem>Yeniye Göre Sırala</MenuItem>
           <MenuItem>Eskiye Göre Sırala</MenuItem>
-          <MenuItem>Puana Göre Sırala</MenuItem>
           <MenuItem>Rastgele Sırala</MenuItem>
         </MenuList>
       </Menu>

@@ -24,6 +24,7 @@ function NavbarButton({ link, text, ...probs }) {
         colorScheme="#6d6875"
         size="lg"
         variant="outline"
+        marginTop={{ lg: "none", sm: "10px" }}
         {...probs}
       >
         {text}
