@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 //CHAKRA IMPORTS
 import { Flex, Image, Heading } from "@chakra-ui/react";
-//COMPONENTS
 
 function HomeButton({ to, src, text, ...probs }) {
   return (

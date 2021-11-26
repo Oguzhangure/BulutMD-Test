@@ -6,9 +6,10 @@ import { Flex, Image, Heading, Collapse, Button } from "@chakra-ui/react";
 //COMPONENTS
 
 function ItemInfobox({ description, year, src, title, ...probs }) {
+  //Ayrıntıları göster/gizle değişimini yapan fonksiyon
   const [show, setShow] = useState(false);
-
   const handleToggle = () => setShow(!show);
+
   return (
     <Flex
       border="2px"

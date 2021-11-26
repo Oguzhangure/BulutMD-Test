@@ -1,6 +1,5 @@
 //REACT IMPORTS
 import React from "react";
-import { useState, useEffect } from "react";
 //CHAKRA IMPORTS
 import {
   Flex,
@@ -13,19 +12,8 @@ import {
   MenuItem,
 } from "@chakra-ui/react";
 import { SearchIcon, ChevronDownIcon } from "@chakra-ui/icons";
-//COMPONENTS
-import API from "../services/API";
 
-function SearchBar({ menu1, menu2, menu3, menu4 }) {
-  const [input, setInput] = useState();
-  const { getMovies, getSeries, getAll } = API();
-  const onSearch = () => {
-    setInput(document.getElementById("itemSearch").value);
-    if (true) {
-      console.log(input);
-    }
-  };
-
+function SearchBar({ menu1, menu2, menu3, menu4, onSearch }) {
   return (
     <Flex
       flexDirection={{ lg: "row", sm: "column" }}
@@ -39,6 +27,7 @@ function SearchBar({ menu1, menu2, menu3, menu4 }) {
         marginBottom={{ lg: "none", sm: "20px" }}
       >
         <Input
+          onChange={onSearch}
           minLength="3"
           id="itemSearch"
           textColor="black"
@@ -50,7 +39,6 @@ function SearchBar({ menu1, menu2, menu3, menu4 }) {
           boxShadow="dark-lg"
         />
         <IconButton
-          onClick={onSearch}
           backgroundColor="#ffb4a2"
           borderRadius="0px 15px 15px 0px"
           _focus="none"

@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 //CHAKRA IMPORTS
 import { Button } from "@chakra-ui/react";
-//COMPONENTS
 
 function NavbarButton({ link, text, ...probs }) {
   return (
