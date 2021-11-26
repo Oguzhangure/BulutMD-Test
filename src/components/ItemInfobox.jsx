@@ -17,7 +17,7 @@ function ItemInfobox({ description, year, src, title, ...probs }) {
       padding="5px"
       flexDirection="column"
       background="#b5838d"
-      boxShadow="lg"
+      boxShadow="-12px 10px 27px 6px rgba(0,0,0,0.67)"
     >
       <Image
         alignSelf="center"

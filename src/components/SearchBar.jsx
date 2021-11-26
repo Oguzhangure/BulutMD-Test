@@ -14,14 +14,18 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon, ChevronDownIcon } from "@chakra-ui/icons";
 //COMPONENTS
+import API from "../services/API";
 
-function SearchBar() {
+function SearchBar({ menu1, menu2, menu3, menu4 }) {
   const [input, setInput] = useState();
-
+  const { getMovies, getSeries, getAll } = API();
   const onSearch = () => {
     setInput(document.getElementById("itemSearch").value);
+    if (true) {
+      console.log(input);
+    }
   };
-  console.log(input);
+
   return (
     <Flex
       flexDirection={{ lg: "row", sm: "column" }}
@@ -46,7 +50,7 @@ function SearchBar() {
           boxShadow="dark-lg"
         />
         <IconButton
-          onClick={() => onSearch()}
+          onClick={onSearch}
           backgroundColor="#ffb4a2"
           borderRadius="0px 15px 15px 0px"
           _focus="none"
@@ -81,10 +85,10 @@ function SearchBar() {
           backgroundColor="#ffcdb2"
           borderColor="black"
         >
-          <MenuItem>Tümünü Sırala</MenuItem>
-          <MenuItem>Yeniye Göre Sırala</MenuItem>
-          <MenuItem>Eskiye Göre Sırala</MenuItem>
-          <MenuItem>Rastgele Sırala</MenuItem>
+          <MenuItem onClick={menu1}>Tümünü Sırala</MenuItem>
+          <MenuItem onClick={menu2}>Yeniye Göre Sırala</MenuItem>
+          <MenuItem onClick={menu3}>Eskiye Göre Sırala</MenuItem>
+          <MenuItem onClick={menu4}>Rastgele Sırala</MenuItem>
         </MenuList>
       </Menu>
     </Flex>
